@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <head>
-  <title>Your page title here</title>
+  <title>Mike's Adventure in Coding</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="your-stylesheet-link-here.css">
 </head>
 
 <main>
-  <h1>Post Title</h1>
-  <h2>The subtitle, if you want it</h2>
-  <h4>Today's Date</h4>
-
+  <h1>Version Control and Stuff</h1>
+  <h2>My first blog post!</h2>
+  <h4>October 24, 2015 (China Time)</h4>
   <section>
     <p>
-      Your first paragraph goes here. I'm using Web 2.0 Ipsum to add content. Webtwo ipsum dolor sit amet, eskobo chumby doostang bebo. Nuvvo koofers oooooc voxy klout jaiku palantir flickr insala zinch napster oooj, airbnb mzinga vimeo yuntaa balihoo plickers whrrl edmodo appjet kippt. Yoono imvu hulu eduvant blekko imvu ebay voki napster skype, hipmunk zinch wesabe bubbli ning meebo bitly zlio. Fleck elgg ideeli disqus rovio zillow sifteo blyve jabber, bitly geni zoho foodzie qeyno twones klout jiglu, hipmunk jaiku balihoo plickers heekya eskobo yuntaa. Sococo whrrl plickers movity whrrl zinch voki nuvvo meebo, quora heroku unigo kno wufoo jibjab woopra, groupon yuntaa spock mzinga jumo meebo movity.
+      <b>What are the benefits of version control?</b><br>
+Let's start by introducing version control. Version Control is a management approach for keeping track of files that undergo many revisions, involving multiple contributors. For instance, at my work where we revise countless essays written by our students, with an average of 10 drafts per essay, we have developed our own 'version control' for keeping track of changes as essays evolve.<br>
+Our system is simple--whenever a student sends us an essay, it starts at V1. Then when we attach our comments and revisions, we save a copy labeled V1M (M for my initial), and send it back to the student. Sometimes we may have another person read over it, in which case another initial is appended, such as V1MK. Once student receives this copy and addresses any comments we've left, it becomes V2, and so on.<br>
+The pro to this is that it's simple. Whenever I'm done with an essay, I slap on my initial and it's done. When the student is done with it, he/she increments the version number, and sends it back. Thus in our folder, we'll have all the version history, beginning from V1, all the way to V10MKX. <br>
+The con to this is that it's simple. Only one person can work on one version at a time. And in a few cases when we want to revert back to an older version, it's hard to keep track of progress. For instance, perhaps by V8, we have hit a roadblock in that direction, and we decide to take a few steps back and go in a different direction with V4, we'll rename it V9, but anyone looking through the drafts can be easily confused by the progression without any notes indicating that V9 is actually a branch off V4. In this case, we have 'branch' files where we create entire new folders when these situations occur, starting with a 'fresh' V1.<br>
+Now when it comes to programming, things get much more complicated. It's common to have multiple people, simultaneously working on different 'versions' and parts of a single project, in which case it's not only important to be able to keep track of everyone's work without conflict, but to selectively implement which changes to adopt. This is where Git comes in, which helps address all these concerns.<br>
     </p>
     <p>
-        Lijit groupon ning stypi eskobo blyve ning shopify oooooc, meebo groupon prezi ebay voxy bitly diigo. Spock ifttt skype hipmunk movity whrrl bebo oooj empressr, disqus insala palantir bitly dropio zimbra zinch oooooc etsy, klout spock insala quora omgpop trulia jibjab. Sifteo dogster ebay grockit geni scribd bitly ning unigo, plickers voki mzinga tumblr kaboodle mozy whrrl woopra udemy, foodzie joukuu elgg twitter shopify akismet rovio. Kosmix eduvant woopra dopplr balihoo ning bebo akismet, boxbe vimeo kosmix shopify zappos bitly geni loopt, qeyno disqus sococo squidoo wikia octopart.
-    </p>
-    <p>
-        Kazaa meevee eduvant gsnap movity kosmix kazaa klout jumo, trulia unigo groupon wakoopa spock knewton glogster heroku oooj, ning imvu appjet eskobo zillow twitter rovio. Glogster chegg voxy greplin dopplr voki foodzie xobni weebly odeo, sococo zynga knewton loopt palantir lala blyve tumblr blekko, twones akismet plaxo kippt meebo zillow zooomr insala. Oovoo imeem napster divvyshot zinch imeem voxy shopify, fleck kazaa zinch lanyrd boxbe joost wakoopa nuvvo, orkut elgg heekya sifteo scribd napster. Yammer yoono groupon dopplr cloudera nuvvo eduvant klout, voxy groupon disqus eduvant oooj greplin.
-    </p>
+      <b>How does git help you keep track of changes?</b> <br>
+There are two aspects to what makes git such an effective Version Control tool. The first aspect is git's meticulous staging of files from <i>untracked</i>, to <i>modified</i>, to <i>staged</i>, to <i>committed</i>. Before a file is officially committed (i.e. saved), it has to go through the stages of being added and committed. This makes sure that files are not simply official the moment we click the save button on the document.<br>
+The second aspect is the branching tool that allows for users to create branches when they work, which is strictly independent of the original master file. So even if a user creates a devastating bug in his/her branch, as long as it isn't merged into the master file, it's safe. <br>
+Branches also means users can work on a project simultaneously, by creating branches of their own in whatever part of the project they're working on. Then when their branch is ready, it can be merged by whoever has authority over the master file. Git has a great logging system, so users can easily refer to (and revert to) all the modifications that's been made since day 1.<br>
 
-      <!-- copy and paste as many sections as you want to add paragraphs -->
+    </p>
+    <p>
+      <b>Why use GitHub to store your code?</b><br>
+GitHub is essentially a cloud storage system for Git. This allows for ease of collaboration amongst people from different locations, and because repositories can be made public, we can invite random strangers to get involved, as long as they're connected to the internet. I think this is what allows for the proliferation of open-source.
+    </p>
   </section>
 </main>
