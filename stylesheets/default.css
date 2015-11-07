@@ -32,6 +32,15 @@ a {
   text-decoration:none;
 }
 
+#socialmedia_links a {
+  text-decoration:none;
+}
+
+#right_bar a{
+  text-decoration:none;
+
+}
+
 nav li {
   font-size:1.4em;
   display:inline;
@@ -90,7 +99,7 @@ footer {
 .horizontal-line {
     border:1px solid gray;
     background-color:#cc0000;
-    margin:15px 0px 15px 0px;
+    margin:15px 2px 15px 0px;
 }
 
 footer p {
