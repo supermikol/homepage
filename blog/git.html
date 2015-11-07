@@ -1,33 +1,62 @@
 <!DOCTYPE html>
-<head>
-  <title>Mike's Adventure in Coding</title>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="your-stylesheet-link-here.css">
-</head>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+    <title>Mike's Adventure in Coding</title>
+  </head>
 
-<main>
-  <h1>Version Control and Stuff</h1>
-  <h2>My first blog post!</h2>
-  <h4>October 24, 2015 (China Time)</h4>
-  <section>
-    <p>
-      <b>What are the benefits of version control?</b><br>
-Let's start by introducing version control. Version Control is a management approach for keeping track of files that undergo many revisions, involving multiple contributors. For instance, at my work where we revise countless essays written by our students, with an average of 10 drafts per essay, we have developed our own 'version control' for keeping track of changes as essays evolve.<br>
-Our system is simple--whenever a student sends us an essay, it starts at V1. Then when we attach our comments and revisions, we save a copy labeled V1M (M for my initial), and send it back to the student. Sometimes we may have another person read over it, in which case another initial is appended, such as V1MK. Once student receives this copy and addresses any comments we've left, it becomes V2, and so on.<br>
-The pro to this is that it's simple. Whenever I'm done with an essay, I slap on my initial and it's done. When the student is done with it, he/she increments the version number, and sends it back. Thus in our folder, we'll have all the version history, beginning from V1, all the way to V10MKX. <br>
-The con to this is that it's simple. Only one person can work on one version at a time. And in a few cases when we want to revert back to an older version, it's hard to keep track of progress. For instance, perhaps by V8, we have hit a roadblock in that direction, and we decide to take a few steps back and go in a different direction with V4, we'll rename it V9, but anyone looking through the drafts can be easily confused by the progression without any notes indicating that V9 is actually a branch off V4. In this case, we have 'branch' files where we create entire new folders when these situations occur, starting with a 'fresh' V1.<br>
-Now when it comes to programming, things get much more complicated. It's common to have multiple people, simultaneously working on different 'versions' and parts of a single project, in which case it's not only important to be able to keep track of everyone's work without conflict, but to selectively implement which changes to adopt. This is where Git comes in, which helps address all these concerns.<br>
-    </p>
-    <p>
-      <b>How does git help you keep track of changes?</b> <br>
-There are two aspects to what makes git such an effective Version Control tool. The first aspect is git's meticulous staging of files from <i>untracked</i>, to <i>modified</i>, to <i>staged</i>, to <i>committed</i>. Before a file is officially committed (i.e. saved), it has to go through the stages of being added and committed. This makes sure that files are not simply official the moment we click the save button on the document.<br>
-The second aspect is the branching tool that allows for users to create branches when they work, which is strictly independent of the original master file. So even if a user creates a devastating bug in his/her branch, as long as it isn't merged into the master file, it's safe. <br>
-Branches also means users can work on a project simultaneously, by creating branches of their own in whatever part of the project they're working on. Then when their branch is ready, it can be merged by whoever has authority over the master file. Git has a great logging system, so users can easily refer to (and revert to) all the modifications that's been made since day 1.<br>
+  <body>
+    <div id="wrapper">
+      <div id="tagline">
+        <h4>Saving the world, one debug at a time</h4>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">My Projects</a></li>
+          <li><a href="#">About Me</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Resume</a></li>
+          <li><a href="#">Contact Me!</a></li>
+        </ul>
+      </nav>
 
-    </p>
-    <p>
-      <b>Why use GitHub to store your code?</b><br>
-GitHub is essentially a cloud storage system for Git. This allows for ease of collaboration amongst people from different locations, and because repositories can be made public, we can invite random strangers to get involved, as long as they're connected to the internet. I think this is what allows for the proliferation of open-source.
-    </p>
-  </section>
-</main>
+      <div id="right_bar">
+        <h1>@supermikol</h1>
+        <div id="profile_pic">
+          <img src="../imgs/profilepic.jpg" alt="no photo">
+        </div>
+        <div id="socialmedia_links">
+          <ul>
+            <li id="li_1">Find me on:</li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">Quora</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <article class="blog-content">
+        <h2>Version Control and Stuff (My first blog post!)</h2>
+        <div class="date">10/24/2015</div>
+        <p class="question">What are the benefits of version control?</p>
+        <p>Let's start by introducing version control. Version Control is a management approach for keeping track of files that undergo many revisions, involving multiple contributors. For instance, at my work where we revise countless essays written by our students, with an average of 10 drafts per essay, we have developed our own 'version control' for keeping track of changes as essays evolve.</p>
+        <p>Our system is simple--whenever a student sends us an essay, it starts at V1. Then when we attach our comments and revisions, we save a copy labeled V1M (M for my initial), and send it back to the student. Sometimes we may have another person read over it, in which case another initial is appended, such as V1MK. Once student receives this copy and addresses any comments we've left, it becomes V2, and so on.</p>
+        <p>The pro to this is that it's simple. Whenever I'm done with an essay, I slap on my initial and it's done. When the student is done with it, he/she increments the version number, and sends it back. Thus in our folder, we'll have all the version history, beginning from V1, all the way to V10MKX. </p>
+        <p>The con to this is that it's simple. Only one person can work on one version at a time. And in a few cases when we want to revert back to an older version, it's hard to keep track of progress. For instance, perhaps by V8, we have hit a roadblock in that direction, and we decide to take a few steps back and go in a different direction with V4, we'll rename it V9, but anyone looking through the drafts can be easily confused by the progression without any notes indicating that V9 is actually a branch off V4. In this case, we have 'branch' files where we create entire new folders when these situations occur, starting with a 'fresh' V1.</p>
+        <p>Now when it comes to programming, things get much more complicated. It's common to have multiple people, simultaneously working on different 'versions' and parts of a single project, in which case it's not only important to be able to keep track of everyone's work without conflict, but to selectively implement which changes to adopt. This is where Git comes in, which helps address all these concerns.</p>
+        <p class="question">How does git help you keep track of changes?</p>
+        <p>There are two aspects to what makes git such an effective Version Control tool. The first aspect is git's meticulous staging of files from <i>untracked</i>, to <i>modified</i>, to <i>staged</i>, to <i>committed</i>. Before a file is officially committed (i.e. saved), it has to go through the stages of being added and committed. This makes sure that files are not simply official the moment we click the save button on the document.</p>
+        <p>The second aspect is the branching tool that allows for users to create branches when they work, which is strictly independent of the original master file. So even if a user creates a devastating bug in his/her branch, as long as it isn't merged into the master file, it's safe. </p>
+        <p>Branches also means users can work on a project simultaneously, by creating branches of their own in whatever part of the project they're working on. Then when their branch is ready, it can be merged by whoever has authority over the master file. Git has a great logging system, so users can easily refer to (and revert to) all the modifications that's been made since day 1.</p>
+        <p class="question">Why use GitHub to store your code?</p>
+        <p>GitHub is essentially a cloud storage system for Git. This allows for ease of collaboration amongst people from different locations, and because repositories can be made public, we can invite random strangers to get involved, as long as they're connected to the internet. I think this is what allows for the proliferation of open-source.</p>
+      </article>
+    </div>
+    <footer>
+      <div class="horizontal-line"></div>
+      <p>Terms of Service, Copyright Stuff, etc...</p>
+    </footer>
+  </body>
+</html>

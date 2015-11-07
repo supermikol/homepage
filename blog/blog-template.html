@@ -1,43 +1,62 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Blog Template</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+    <title>Cookies And Their Magic</title>
   </head>
+
   <body>
-    <div id="main">
-      <div id="left">
+    <div id="wrapper">
+      <div id="tagline">
         <h4>Saving the world, one debug at a time</h4>
-        <nav>
-          <a href="#">My Projects</a>
-          <a href="#">About Me</a>
-          <a href="#">Blog</a>
-          <a href="#">Resume</a>
-          <a href="#">Contact Me!</a>
-        </nav>
-        <h3>Why are cookies so incredibly delicious?</h3>
-        <h4>10/31/2015</h4>
-        <p>
-          Blah Blah blah. Cookies.
-        </p>
       </div>
-      <div id="right">
-        <h1><a href="#">@supermikol</a></h1>
-        <img src="img/my-image.png" alt="No Image">
+      <nav>
         <ul>
-          <li><a href="#">Find me on:</a></li>
-          <li><a href="#">LinkedIn</a></li>
-          <li><a href="#">Github</a></li>
-          <li><a href="#">Quora</a></li>
-          <li><a href="#">Facebook</a></li>
+          <li><a href="#">My Projects</a></li>
+          <li><a href="#">About Me</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Resume</a></li>
+          <li><a href="#">Contact Me!</a></li>
         </ul>
+      </nav>
+
+      <div id="right_bar">
+        <h1>@supermikol</h1>
+        <div id="profile_pic">
+          <img src="../imgs/profilepic.jpg" alt="no photo">
+        </div>
+        <div id="socialmedia_links">
+          <ul>
+            <li id="li_1">Find me on:</li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">Quora</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ul>
+        </div>
       </div>
+
+      <article class="blog-content">
+        <h2>Why are cookies so incredibly delicious?</h2>
+          <div class="date">10/31/2015</div>
+          <p>Today, we talk cookies.</p>
+          <figure>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/2ChocolateChipCookies.jpg/500px-2ChocolateChipCookies.jpg" alt="cookie" />
+            <figcaption>This here is a cookie</figcaption>
+          </figure>
+          <p>In the United States and Canada a cookie is a small, flat, sweet baked treat, usually containing flour, eggs, sugar, and either butter, cooking oil or another oil or fat, and often including ingredients such as raisins, oats, chocolate chips or nuts. Cookies may be mass-produced, made in small bakeries or home-made. Cookie variants include using two thin cookies with a creme filling (e.g., Oreos) and dipping the cookie in chocolate or another sweet coating. Cookies are often served with beverages such as milk, coffee or tea.
+          In most other English-speaking countries cookies are called biscuits.
+          </p>
+      </article>
     </div>
-    <div id="footer">
-      <hr>
-      <h6>Terms of Service, Copyright stuff, etc..</h6>
-    </div>
+    <footer>
+      <div class="horizontal-line"></div>
+      <p>Terms of Service, Copyright Stuff, etc...</p>
+    </footer>
   </body>
 </html>
+
 <!--
 How was it to wireframe and create an HTML page with a pair?
 It was very insightful to see how my partner approached wireframing and coding, so overall, I really appreciated the process.
