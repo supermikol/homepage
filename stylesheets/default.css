@@ -17,13 +17,10 @@
   font-weight:bold;
 }
 
-body {
-  display:inline-block;
-}
-
 #wrapper {
   width:70%;
 }
+
 a {
   color:#2B3A42;
 }
@@ -91,7 +88,6 @@ article {
 footer {
   width:100%;
   clear:both;
-  float:bottom;
   bottom:0px;
   font-size:0.9em;
 }
