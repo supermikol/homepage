@@ -1,0 +1,29 @@
+.blog-content figure {
+  position:relative;
+  left:1em;
+}
+
+figcaption {
+    font-style:italic;
+    padding:0.25em;
+}
+
+figure img {
+  border:1px solid gray;
+}
+
+.blog-content p {
+  font-size:1.25em;
+}
+
+.question{
+  font-weight:bold;
+}
+
+.blog-content .date {
+  text-decoration:underline;
+  font-weight:bold;
+  position:relative;
+  top:-1em;
+}
+

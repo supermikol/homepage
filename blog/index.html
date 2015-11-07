@@ -1,37 +1,43 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Mike's Blog Page</title>
-    <div id="tagline">
-      <h3>Saving the world, one debug at a time</h3>
-    </div>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+    <title>My Blogs!</title>
   </head>
+
+
   <body>
+    <div id="tagline">
+      <h4>Saving the world, one debug at a time</h4>
+    </div>
     <nav>
       <ul>
-        <li>My Projects</li>
-        <li>About Me</li>
-        <li>Blog</li>
-        <li>Resume</li>
-        <li>Contact Me!</li>
+        <li><a href="#">My Projects</a></li>
+        <li><a href="#">About Me</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Resume</a></li>
+        <li><a href="#">Contact Me!</a></li>
       </ul>
     </nav>
+
     <div id="right_bar">
-      <h2>@supermikol</h2>
+      <h1>@supermikol</h1>
       <div id="profile_pic">
-        <img src="#" alt="no photo">
+        <img src="../imgs/profilepic.jpg" alt="no photo">
       </div>
       <div id="socialmedia_links">
         <ul>
-          <li>Find me on:</li>
-          <li>LinkedIn</li>
-          <li>GitHub</li>
-          <li>Quora</li>
-          <li>Facebook</li>
+          <li id="li_1">Find me on:</li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">GitHub</a></li>
+          <li><a href="#">Quora</a></li>
+          <li><a href="#">Facebook</a></li>
         </ul>
       </div>
     </div>
-    <article id="content">
+
+    <article class="content">
       <h2>Blog Post 1</h2>
       <p>Preview of blog...</p>
       <h2>Blog Post 2</h2>
@@ -41,8 +47,12 @@
       <h2>Blog Post 4</h2>
       <p>Preview of blog...</p>
     </article>
+
+    <footer>
+      <div class="horizontal-line"></div>
+      <p>Terms of Service, Copyright Stuff, etc...</p>
+    </footer>
   </body>
-  <footer>
-    <p>Terms of Service, Copyright Stuff, etc...</p>
-  </footer>
 </html>
+
+
