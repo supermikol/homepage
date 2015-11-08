@@ -6,6 +6,7 @@
 figcaption {
     font-style:italic;
     padding:0.25em;
+    width:30em;
 }
 
 figure img {
@@ -15,7 +16,7 @@ figure img {
 .blog-content p {
   font-size:1.1em;
   position:relative;
-  margin-top:-0.75em;
+
 }
 
 .question{
@@ -26,6 +27,5 @@ figure img {
   text-decoration:underline;
   font-weight:bold;
   position:relative;
-  top:-1em;
 }
 
