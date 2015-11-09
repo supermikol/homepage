@@ -1,6 +1,48 @@
 * {
-  font-family:Arial;
-  background-color:#BDD4DE;
+  font-family:American Typewriter;
+
+}
+
+#background {
+  padding-top:160px;
+  text-align:center;
+  color:#fafafa;
+  background-size:cover;
+  height:85px;
+}
+
+header {
+  position:relative;
+  top:5px;
+  text-align:center;
+  width:73%;
+  border-bottom:2px solid black;
+}
+
+a {
+  color:#2B3A42;
+}
+
+a:hover {
+  font-weight:lighter;
+  color:0163A4;
+}
+
+#tagline {
+  text-align:center;
+}
+
+#tagline h4 {
+  font-size:1.5em;
+  font-weight:bold;
+  margin-top:2em;
+  font-family:Synchro LET;
+}
+
+nav li {
+  font-size:1.7em;
+  display:inline;
+  margin:0.75em;
 }
 
 #right_bar {
@@ -12,58 +54,12 @@
   margin-right:auto;
 }
 
-#tagline h4 {
-  font-size:1.25em;
-  font-weight:bold;
-  margin-top:2em;
-}
-
-#wrapper {
-  width:70%;
-  min-width:25em;
-}
-
-a {
-  color:#2B3A42;
-}
-
-#socialmedia_links a {
-  text-decoration:none;
-}
-
-#socialmedia_links a {
-  text-decoration:none;
+#right_bar h1 {
+  font-size:2.5em;
 }
 
 #right_bar a{
-  text-decoration:none;
 
-}
-
-nav li {
-  font-size:1.4em;
-  display:inline;
-  margin:0.75em;
-}
-
-nav {
-  text-align:center;
-
-}
-
-#tagline {
-  text-align:center;
-}
-
-article {
-  float:left;
-  padding:2em;
-  color:#3F5765;
-
-}
-
-#right_bar h1 {
-  font-size:2.5em;
 }
 
 #profile_pic img {
@@ -73,7 +69,6 @@ article {
 }
 
 #socialmedia_links li {
-  font-weight:bold;
   width:8em;
   height:2em;
   font-size:1.2em;
@@ -83,8 +78,27 @@ article {
   padding-top:.4em;
 }
 
-#li_1 {
-  background-color:#BFBFBF;
+#socialmedia_links a{
+  text-decoration:none;
+
+}
+
+article {
+  padding:2em;
+  color:#3F5765;
+  width:65%;
+}
+
+.home-content p {
+  font-size:1.5em;
+  position:relative;
+}
+
+.home-content {
+  min-height:35em;
+  width:60%;
+  margin: 3em;
+
 }
 
 footer {
@@ -94,13 +108,14 @@ footer {
   font-size:0.9em;
 }
 
+footer p {
+  color:#999999;
+  padding-left:1em;
+}
+
 .horizontal-line {
     border:1px solid gray;
     background-color:#cc0000;
     margin:15px 2px 15px 0px;
 }
 
-footer p {
-  color:#999999;
-  padding-left:1em;
-}
