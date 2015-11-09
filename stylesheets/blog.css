@@ -16,7 +16,10 @@ figure img {
 .blog-content p {
   font-size:1.1em;
   position:relative;
+}
 
+.blog-content h2 {
+  font-weight:normal;
 }
 
 .question{
