@@ -13,9 +13,15 @@ figure img {
   border:1px solid gray;
 }
 
+.blog-content {
+  margin:1em;
+  min-height:35em;
+  }
+
 .blog-content p {
   font-size:1.1em;
   position:relative;
+
 }
 
 .blog-content h2 {

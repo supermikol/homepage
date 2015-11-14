@@ -68,29 +68,40 @@ nav li {
   height:auto;
 }
 
+#socialmedia_links{
+  padding-top:2em;
+}
 #socialmedia_links li {
   width:8em;
   height:2em;
   font-size:1.2em;
   display:block;
-  border:1px solid gray;
-  text-align:center;
-  padding-top:.4em;
+  padding-top:.2em;
+  border-radius: 1em;
+}
+
+#li_1 {
+  font-weight:bold;
 }
 
 #socialmedia_links a{
   text-decoration:none;
+}
 
+#socialmedia_links img {
+  height:1em;
+  width:1em;
+  padding-right:.5em;
 }
 
 article {
-  padding:2em;
+  padding:.75em;
   color:#3F5765;
   width:65%;
 }
 
 .home-content p {
-  font-size:1.5em;
+  font-size:1.25em;
   position:relative;
 }
 
@@ -98,7 +109,10 @@ article {
   min-height:35em;
   width:60%;
   margin: 3em;
+}
 
+#cat {
+padding-top:3em;
 }
 
 footer {
@@ -119,3 +133,10 @@ footer p {
     margin:15px 2px 15px 0px;
 }
 
+article li {
+  padding-top:.5em;
+}
+
+#oxford img {
+  width:80%;
+}
