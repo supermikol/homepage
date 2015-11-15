@@ -1,12 +1,11 @@
-* {
-  font-family:American Typewriter;
-
+body {
+  font-family:Century Gothic;
+  background-color:#fafafa;
 }
 
 #background {
   padding-top:160px;
   text-align:center;
-  color:#fafafa;
   background-size:cover;
   height:85px;
 }
@@ -24,7 +23,7 @@ a {
 }
 
 a:hover {
-  font-weight:lighter;
+  font-weight:bold;
   color:0163A4;
 }
 
@@ -58,8 +57,9 @@ nav li {
   font-size:2.5em;
 }
 
-#right_bar a{
-
+#right_bar a:hover {
+  font-weight:lighter;
+  color:0163A4;
 }
 
 #profile_pic img {
@@ -71,7 +71,9 @@ nav li {
 #socialmedia_links{
   padding-top:2em;
 }
+
 #socialmedia_links li {
+  font-family:American Typewriter;
   width:8em;
   height:2em;
   font-size:1.2em;
@@ -96,7 +98,7 @@ nav li {
 
 article {
   padding:.75em;
-  color:#3F5765;
+  color: black;
   width:65%;
 }
 
