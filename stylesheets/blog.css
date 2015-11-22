@@ -21,7 +21,6 @@ figure img {
 .blog-content p {
   font-size:1.1em;
   position:relative;
-
 }
 
 .blog-content h2 {
@@ -38,3 +37,9 @@ figure img {
   position:relative;
 }
 
+.code {
+  padding-left: 1em;
+  font-family: monospace;
+  font-size: 1.25em;
+  display: block;
+}
