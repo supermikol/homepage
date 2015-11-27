@@ -5,8 +5,9 @@
 
 figcaption {
     font-style:italic;
+    font-size: 0.8em;
     padding:0.25em;
-    width:30em;
+    width:50em;
 }
 
 figure img {
