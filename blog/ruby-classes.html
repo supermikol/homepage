@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+    <title>Classes!</title>
+    <meta charset="UTF-8">
+  </head>
+
+  <body>
+    <header>
+      <div id="tagline">
+        <h4>Saving the world, one debug at a time</h4>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../projects.html">PROJECTS</a></li>
+          <li><a href="../about.html">ABOUT</a></li>
+          <li><a href="index.html">BLOG</a></li>
+          <li><a href="../resume.html">RESUME</a></li>
+          <li><a href="../contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="right_bar">
+      <h1><a href="../index.html">@supermikol</a></h1>
+      <div id="profile_pic">
+        <img src="../imgs/profilepic.jpg" alt="no photo">
+      </div>
+      <div id="socialmedia_links">
+        <ul>
+          <li id="li_1">Find me on:</li>
+          <li><a href="https://cn.linkedin.com/in/michael-du-4927555"><img src="../imgs/linkedin_logo.png" alt="linkedin logo">LinkedIn</a></li>
+          <li><a href="http://supermikol.github.io"><img src="../imgs/github_logo.png" alt="github logo">GitHub</a></li>
+          <li><a href="https://www.quora.com/profile/Michael-Du-5"><img src="../imgs/quora_logo.png" alt="quora logo">Quora</a></li>
+          <li><a href="https://www.facebook.com/mikedu"><img src="../imgs/facebook_logo.png" alt="facebook logo">Facebook</a></li>
+          <li><a href="http://www.zhihu.com/people/michael-du-56"><img src="../imgs/zhihu_logo.png" alt="zhihu logo">Zhihu</a></li>
+        </ul>
+      </div>
+      </div>
+
+      <article class="blog-content">
+        <h2>Class is in session!</h2>
+        <div class="date">11/14/2015</div>
+          <p>A class is an object, and an object is always part of a class. Confused yet?<p>
+
+          <p>Then let’s start over.<p>
+
+          <p>We should all know what an object is now. A string is an object, an array is an object, and so is a hash. Objects are entities that hold one or more values.<p>
+
+          <p>A class is also an object. It can also store information that can be called, except it stands out from your typical objects in two ways:<p>
+          <p>1) It’s a creator of objects. Think about when you create a new array using the explicit call:<p>
+
+          <span class = "code">my_array = Array.new</span>
+
+          <p>Array is an object, but through it, I have created a child of Array, or in programming terminology, it’s an ‘instance’ of Array.<p>
+
+          <p>2) It contains methods that are only accessible by each instance of Array—predefined methods that can manipulate the instance objects anyway I want to (within the scope of programming of course). For example, when I call the following:<p>
+
+          <span class = "code">my_array.flatten</span>
+
+          <p>I am calling the method #flatten on an instance of the class Array. Flatten can’t be called on a hash, nor a string, only on objects that I have created under the Array class, because the #flatten method was specifically defined within the Array class, and this is what makes classes so powerful.<p>
+
+          <p>Now, without further ado, let’s walk through a class!<p>
+
+          <span class = "code">class CoolClass</span>
+          <span class = "code">  def initialize(student_count)</span>
+          <span class = "code">    @student_count = student_count</span>
+          <span class = "code">  end</span>
+          <span class = "code">end</span>
+
+          <p>So this is the most basic step of creating a class. I’ve created a class of objects called CoolClass, which takes in one argument that will define the size of the class. If I were to create an instance of this class, this is how I’d do it:<p>
+
+          <span class = "code">my_class = CoolClass.new(30)</span>
+
+          <p>The ’30’ is the argument I’ve set for the class to take in upon initializing, so that my_class is an object of the class CoolClass with a student_count of 30.<p>
+
+          <p>Notice the @ symbol in front of @student_count. This signals that the variable is an instance variable, and what that means is that every object of class CoolClass I create from here on will have it’s own @student_count value. For instance, if I create another object using:<p>
+
+          <span class = "code">my_second_class = CoolClass.new(15)</span>
+
+          <p>This second class will have a @student_count variable set equal to 15, distinct from the @student_count of my_class. This @student_count will also follow this instance wherever it goes, and can be accessed by instance methods, which I’ll demonstrate. Let’s say I add this to my CoolClass:<p>
+
+          <span class = "code">class CoolClass</span>
+          <span class = "code">  def initialize(student_count)</span>
+          <span class = "code">    @student_count = student_count</span>
+          <span class = "code">  end</span>
+
+          <span class = "code">  def add_student</span>
+          <span class = "code">    @student_count += 5</span>
+          <span class = "code">  end</span>
+          <span class = "code">end</span>
+          <p>Here I’ve created a new instance method, which means it can only be called on instances of CoolClass. Additionally, what this method will do is increate @student_count of that specific instance by 5.<p>
+
+          <span class = "code">my_class.add_student #@student_count will increase to 35</span>
+          <span class = "code">my_second_class.add_student #@student_count will increase to 20</span>
+
+          <p>Follow the magic? Pretty cool isn’t it? This is only the beginning, as there are plenty more ways to play with and manipulate existing classes or new classes, to have objects you create do almost anything you want. Hopefully this blog post will have provided you with a good foundation to get started and experiment on your own. Happy coding (and Thanksgiving)!<p>
+      </article>
+    </div>
+    <footer>
+      <div class="horizontal-line"></div>
+      <p>&copy;2015 by Stranger Danger</p>
+    </footer>
+  </body>
+</html>
+
+
+
+

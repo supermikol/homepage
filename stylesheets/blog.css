@@ -31,15 +31,19 @@ figure img {
   font-weight:bold;
 }
 
-.blog-content .date {
+.date {
+  margin-top: -1em;
+  font-style:italic;
   text-decoration:underline;
-  font-weight:bold;
   position:relative;
 }
 
 .code {
-  padding-left: 1em;
+  padding: 0.3em 1em;
   font-family: monospace;
   font-size: 1.25em;
   display: block;
+  color: white;
+  background-color: grey;
+  white-space:pre;
 }
