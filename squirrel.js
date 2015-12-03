@@ -46,8 +46,8 @@ function move(direction) {
     update_squirrel();
   }
   else {
-    reset_game();
     alert("You are out of turns! You collected a grand total of " + squirrel.acorns + " acorns!");
+    reset_game();
 
   }
 }
