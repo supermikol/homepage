@@ -2,7 +2,7 @@ var squirrel = {
   posX: 1,
   posY: 0,
   acorns: 0,
-  turns: 12
+  turns: 15
 }
 var acorn = {
   posY: Math.round(Math.random()),
@@ -46,7 +46,9 @@ function move(direction) {
     update_squirrel();
   }
   else {
+    reset_game();
     alert("You are out of turns! You collected a grand total of " + squirrel.acorns + " acorns!");
+
   }
 }
 
@@ -116,4 +118,20 @@ function update_squirrel() {
       }
 
     }
+}
+
+function reset_game() {
+  clear_boxes();
+  update_acorn();
+  update_squirrel();
+  squirrel = {
+    posX: 1,
+    posY: 0,
+    acorns: 0,
+    turns: 15
+}
+  acorn = {
+    posY: Math.round(Math.random()),
+    posX: Math.floor(Math.random()*3)
+}
 }
