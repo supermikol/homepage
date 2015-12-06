@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+    <title>JavaScript vs Ruby</title>
+    <meta charset="UTF-8">
+  </head>
+
+  <body>
+    <header>
+      <div id="tagline">
+        <h4>Saving the world, one debug at a time</h4>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../projects.html">PROJECTS</a></li>
+          <li><a href="../about.html">ABOUT</a></li>
+          <li><a href="index.html">BLOG</a></li>
+          <li><a href="../resume.html">RESUME</a></li>
+          <li><a href="../contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="right_bar">
+      <h1><a href="../index.html">@supermikol</a></h1>
+      <div id="profile_pic">
+        <img src="../imgs/profilepic.jpg" alt="no photo">
+      </div>
+      <div id="socialmedia_links">
+        <ul>
+          <li id="li_1">Find me on:</li>
+          <li><a href="https://cn.linkedin.com/in/michael-du-4927555"><img src="../imgs/linkedin_logo.png" alt="linkedin logo">LinkedIn</a></li>
+          <li><a href="http://supermikol.github.io"><img src="../imgs/github_logo.png" alt="github logo">GitHub</a></li>
+          <li><a href="https://www.quora.com/profile/Michael-Du-5"><img src="../imgs/quora_logo.png" alt="quora logo">Quora</a></li>
+          <li><a href="https://www.facebook.com/mikedu"><img src="../imgs/facebook_logo.png" alt="facebook logo">Facebook</a></li>
+          <li><a href="http://www.zhihu.com/people/michael-du-56"><img src="../imgs/zhihu_logo.png" alt="zhihu logo">Zhihu</a></li>
+        </ul>
+      </div>
+      </div>
+
+      <article class="blog-content">
+        <h2>JavaScript Constructors vs. Ruby Classes</h2>
+          <div class="date">12/6/2015</div>
+          <p>My blog post this week is about Javascript’s constructor function vs Ruby’s classes, and I want to begin by reviewing Ruby classes first. Classes are in charge of accomplishing two things:</p>
+
+          <ol>
+            <li>Creating new objects that have predefined values (as defined by the coder), and</li>
+            <li>Predefining methods that work specifically with instances belonging to this class</li>
+          </ol>
+
+          <p>You may be thinking, “Well, methods are technically a type of ‘predefined’ values, so there’s really no point of breaking it up into a separate step”, and you’re right! However, Javascript isn’t as friendly as our beloved Ruby, and does draw a distinction between the two stages, including how they’re created.</p>
+
+          <p>I’m going to start off with a Ruby class, ToDo, which takes in a string with today’s date, and an array with a list of today’s tasks. Furthermore, there is a method to list all the items in the array.</p>
+
+          <span class = "code">class ToDo</span>
+          <span class = "code">  def initialize(date,tasks)</span>
+          <span class = "code">    @date = date</span>
+          <span class = "code">    raise ArgumentError, "Second item should be array" unless tasks.is_a?(Array)</span>
+          <span class = "code">    @tasks = tasks</span>
+          <span class = "code">  end</span>
+          <span class = "code">  def show</span>
+          <span class = "code">    @tasks.each_with_index{|x,i| puts "#{i + 1}. #{x}"}</span>
+          <span class = "code">  end</span>
+          <span class = "code">end</span>
+
+          <span class = "code">fresh_todo = ToDo.new("12/6",["Eat","Sleep","Shower"])</span>
+          <span class = "code">fresh_todo.show</span>
+
+          <span class = "code"># Output:</span>
+          <span class = "code"># 1. Eat</span>
+          <span class = "code"># 2. Sleep</span>
+          <span class = "code"># 3. Shower</span>
+
+          <p>Simple, right?</p>
+
+          <p>Now let’s see how I *might* accomplish the same thing in Javascript:</p>
+
+          <span class = "code">var ToDo = function (date, list) {</span>
+          <span class = "code">  this.date = date;</span>
+          <span class = "code">  this.list = list;</span>
+          <span class = "code">  this.show = function() {</span>
+          <span class = "code">    for (i=1; i <= this.list.length; i++){</span>
+          <span class = "code">      console.log(i + ". " + this.list[i-1]);</span>
+          <span class = "code">    }</span>
+          <span class = "code">  }</span>
+          <span class = "code">}</span>
+
+          <span class = "code">fresh_todo = new ToDo("12/6", ["Eat","Sleep","Shower"]);</span>
+          <span class = "code">fresh_todo.show();</span>
+          <span class = "code">// Output:</span>
+          <span class = "code">// 1. Eat</span>
+          <span class = "code">// 2. Sleep</span>
+          <span class = "code">// 3. Shower</span>
+
+          <p>This works! But it’s not the most efficient, because defining the function within he constructor means the function is recreated with each instance that is created. This takes up a lot of memory usages if we are planning to create many instances of a ‘class’.</p>
+
+          <p>A more memory efficient way is to use the prototype like this:</p>
+
+          <span class = "code">var ToDo = function (date, list) {</span>
+          <span class = "code">  this.date = date;</span>
+          <span class = "code">  this.list = list;</span>
+          <span class = "code">}</span>
+
+          <span class = "code">ToDo.prototype.show = function() {</span>
+          <span class = "code">  for (i=1; i <= this.list.length; i++){</span>
+          <span class = "code">    console.log(i + ". " + this.list[i-1]);</span>
+          <span class = "code">  }</span>
+          <span class = "code">}</span>
+
+          <span class = "code">fresh_todo = new ToDo("12/6", ["Eat","Sleep","Shower"]);</span>
+          <span class = "code">fresh_todo.show();</span>
+
+          <span class = "code">// Output:</span>
+          <span class = "code">// 1. Eat</span>
+          <span class = "code">// 2. Sleep</span>
+          <span class = "code">// 3. Shower</span>
+
+          <p>Lack of enumerator aside, notice how the ‘show’ function is defined outside of the constructor function. Instances in Javascript refer to their ‘prototype’ for instructions on a method, which is the constructor function, and we have to explicitly define the method within the prototype in order for it to work. This means the method only needs to be defined once, instead of being replicated repeatedly for every new instance.</p>
+
+          <p>You can think of it this way, defining a function within a prototype is like giving a function to a superclass, and all the new instances have to do is look into the superclass to find it.</p>
+
+          <p>Prototypes are something we didn’t touch on this week, but while researching for some of the challenges this week, I’ve come across it quite  a few times, so I think it’s worth exploring further.</p>
+      </article>
+    </div>
+    <footer>
+      <div class="horizontal-line"></div>
+      <p>&copy;2015 by Stranger Danger</p>
+    </footer>
+  </body>
+</html>
+
+
+<!--
+How was it to wireframe and create an HTML page with a pair?
+It was very insightful to see how my partner approached wireframing and coding, so overall, I really appreciated the process.
+Did you find wireframing to be helpful to your development process?
+Yes, because it provided that general frame of reference for us as we decided how to break up the page in terms of the div's we were using.
+What did you and your pair decide made a good wireframe?
+Our wireframes actually aren't very similar, but we did agree that it should contain the same frame we used for our landing page, meaning it should include the navigation bar, our photo, and links to our social media pages.
+What new semantic elements did you learn about (if any)?
+Div ids were helpful for mentally keeping track of the various sections on our pages.
+  -->
