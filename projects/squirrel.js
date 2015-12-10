@@ -64,26 +64,26 @@ function update_acorn() {
    if (acorn.posY === 0) {
     switch (acorn.posX) {
       case 0:
-        document.getElementById("box_00").src = "imgs/acorn_pixel.png";
+        document.getElementById("box_00").src = "../imgs/acorn_pixel.png";
         break;
       case 1:
-        document.getElementById("box_10").src = "imgs/acorn_pixel.png";
+        document.getElementById("box_10").src = "../imgs/acorn_pixel.png";
         break;
       case 2:
-        document.getElementById("box_20").src = "imgs/acorn_pixel.png";
+        document.getElementById("box_20").src = "../imgs/acorn_pixel.png";
         break;
     }
    }
     else {
       switch (acorn.posX) {
       case 0:
-        document.getElementById("box_01").src = "imgs/acorn_pixel.png";
+        document.getElementById("box_01").src = "../imgs/acorn_pixel.png";
         break;
       case 1:
-        document.getElementById("box_11").src = "imgs/acorn_pixel.png";
+        document.getElementById("box_11").src = "../imgs/acorn_pixel.png";
         break;
       case 2:
-        document.getElementById("box_21").src = "imgs/acorn_pixel.png";
+        document.getElementById("box_21").src = "../imgs/acorn_pixel.png";
         break;
       }
 
@@ -94,26 +94,26 @@ function update_squirrel() {
    if (squirrel.posY === 0) {
     switch (squirrel.posX) {
       case 0:
-        document.getElementById("box_00").src = "imgs/squirrel_pixel.jpg";
+        document.getElementById("box_00").src = "../imgs/squirrel_pixel.jpg";
         break;
       case 1:
-        document.getElementById("box_10").src = "imgs/squirrel_pixel.jpg";
+        document.getElementById("box_10").src = "../imgs/squirrel_pixel.jpg";
         break;
       case 2:
-        document.getElementById("box_20").src = "imgs/squirrel_pixel.jpg";
+        document.getElementById("box_20").src = "../imgs/squirrel_pixel.jpg";
         break;
     }
    }
     else {
       switch (squirrel.posX) {
       case 0:
-        document.getElementById("box_01").src = "imgs/squirrel_pixel.jpg";
+        document.getElementById("box_01").src = "../imgs/squirrel_pixel.jpg";
         break;
       case 1:
-        document.getElementById("box_11").src = "imgs/squirrel_pixel.jpg";
+        document.getElementById("box_11").src = "../imgs/squirrel_pixel.jpg";
         break;
       case 2:
-        document.getElementById("box_21").src = "imgs/squirrel_pixel.jpg";
+        document.getElementById("box_21").src = "../imgs/squirrel_pixel.jpg";
         break;
       }
 

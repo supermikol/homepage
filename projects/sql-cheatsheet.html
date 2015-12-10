@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/cheatsheet.css">
+    <title>SQL Cheatsheet</title>
+    <meta charset="UTF-8">
+  </head>
+
+  <body>
+    <header>
+      <div id="tagline">
+        <h4>Saving the world, one debug at a time</h4>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../projects.html">PROJECTS</a></li>
+          <li><a href="../about.html">ABOUT</a></li>
+          <li><a href="index.html">BLOG</a></li>
+          <li><a href="../resume.html">RESUME</a></li>
+          <li><a href="../contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="right_bar">
+      <h1><a href="../index.html">@supermikol</a></h1>
+      <div id="profile_pic">
+        <img src="../imgs/profilepic.jpg" alt="no photo">
+      </div>
+      <div id="socialmedia_links">
+        <ul>
+          <li id="li_1">Find me on:</li>
+          <li><a href="https://cn.linkedin.com/in/michael-du-4927555"><img src="../imgs/linkedin_logo.png" alt="linkedin logo">LinkedIn</a></li>
+          <li><a href="http://supermikol.github.io"><img src="../imgs/github_logo.png" alt="github logo">GitHub</a></li>
+          <li><a href="https://www.quora.com/profile/Michael-Du-5"><img src="../imgs/quora_logo.png" alt="quora logo">Quora</a></li>
+          <li><a href="https://www.facebook.com/mikedu"><img src="../imgs/facebook_logo.png" alt="facebook logo">Facebook</a></li>
+          <li><a href="http://www.zhihu.com/people/michael-du-56"><img src="../imgs/zhihu_logo.png" alt="zhihu logo">Zhihu</a></li>
+        </ul>
+      </div>
+      </div>
+
+      <article class="cheatsheet-content">
+        <h1>SQL Cheatsheet</h1>
+
+          <div class="functionname">LIMIT [count]</div>
+          Example: <div class="code">SELECT * FROM movies ORDER BY imdb_rating ASC LIMIT 3;</div>
+          <span class="methoddetail">Limits results to the top [count] number</span>
+
+          <div class="functionname">ORDER BY [file_name] DESC</div>
+          Example: <div class="code">SELECT * FROM movies ORDER BY imdb_rating ASC LIMIT 3;</div>
+          <span class="methoddetail">Sorts by descending or ascending(ASC)</span>
+
+          <div class="functionname">PRIMARY KEY/FOREIGN KEY</div>
+          Example: <div class="code">CREATE TABLE artists(id INTEGER PRIMARY KEY, name TEXT);</div>
+          Example: <div class="code">CREATE TABLE album(id INTEGER, artist_id, FOREIGN KEY (artist_id) REFERENCES artists(id));</div>
+
+          <span class="methoddetail">A PRIMARY KEY serves as a unique identifier for each row or record in a given table. The primary key is literally an id value for a record. We're going to use this value to connect artists to the albums they have produced.</span>
+          <span class="methoddetail">By specifying that the id column is the PRIMARY KEY, SQL makes sure that:</span>
+          <span class="methoddetail">- None of the values in this column areNULLEach value in this column is unique</span>
+          <span class="methoddetail">- A table can not have more than onePRIMARY KEY column.</span>
+
+          <span class="methoddetail">FOREIGN KEY is something that refers to PRIMARY KEY in another table.</span>
+
+          <div class="functionname">JOIN</div>
+          Example: <div class="code">SELECT * FROM albums LEFT JOIN artists ON albums.artist_id = artists.id;</div>
+          <span class="methoddetail">Joins lists together</span>
+          <span class="methoddetail">**LEFT retains entries that don’t have a match.</span>
+
+          <div class="functionname">AS</div>
+          Example: <div class="code">SELECT albums.name AS 'Album', albums.year, artists.name AS 'Artist' FROM albums JOIN artists ON albums.artist_id = artists.id WHERE albums.year > 1980;</div>
+          <span class="methoddetail">Sets an alias for column value when displaying</span>
+
+          <div class="functionname">ROUND/AVG</div>
+          Example: <div class="code">SELECT price, ROUND(AVG(downloads),2) FROM fake_apps GROUP BY price;</div>
+          <span class="methoddetail">Rounds the value by the number of decimal points as set by the second parameter. Default is 0</span>
+
+          <div class="functionname">GROUP BY</div>
+          Example: <div class="code">SELECT price, COUNT(*) FROM fake_apps GROUP BY price;</div>
+          <span class="methoddetail">GROUP BY is a clause in SQL that is only used with aggregate functions. It is used in collaboration with the SELECT statement to arrange identical data into groups.</span>
+
+          <div class="functionname">COUNT</div>
+          Example: <div class="code">SELECT price, COUNT(*) FROM fake_apps GROUP BY price;</div>
+          <span class="methoddetail">Aggregate function that counts the number of instances that contain the value falling within each category.</span>
+
+          <div class="functionname">WHERE</div>
+          Example: <div class="code">SELECT * FROM movies WHERE name = “Forrest Gump”;</div>
+          <span class="methoddetail">Conditional operator</span>
+
+          <div class="functionname">Wildcards: % and _ and []</div>
+          Example: <div class="code">SELECT * FROM movies WHERE name LIKE 'A%';</div>
+
+          Example: <div class="code">SELECT * FROM Customers WHERE City LIKE 'L_n_on';</div>
+
+          Example: <div class="code">SELECT * FROM Customers WHERE City LIKE '[bsp]%';</div>
+          <span class="methoddetail">Used with the LIKE operator. This SQL statement selects all customers with a City starting with "b", "s", or "p"</span>
+
+          <div class="functionname">DISTINCT</div>
+          Example: <div class="code">SELECT DISTINCT genre FROM movies;</div>
+          <span class="methoddetail">Displays only unique results.</span>
+
+          <div class="functionname">DELETE FROM</div>
+          Example: <div class="code">DELETE FROM celebs WHERE twitter_handle IS NULL;</div>
+          <span class="methoddetail">Deletes entire row of values</span>
+
+          <div class="functionname">Create a table</div>
+          Example: <div class="code">CREATE TABLE celebs (id INTEGER, name TEXT, age INTEGER);</div>
+
+          <div class="functionname">Alter a table</div>
+          Example: <div class="code">ALTER TABLE celebs ADD COLUMN twitter_handle TEXT;</div>
+          <span class="methoddetail">Adds a column</span>
+
+          <div class="functionname">UPDATE</div>
+          Example: <div class="code">UPDATE celebs SET age = 24 WHERE age = 22;</div>
+          <span class="methoddetail">Updates values in a table</span>
+
+          <div class="functionname">INSERT INTO</div>
+          Example: <div class="code">INSERT INTO celebs (name, age, id) VALUES ("Taylor Swift", 26, 4);</div>
+          <span class="methoddetail">Inserts a new row into table</span>
+
+          <div class="functionname">IS NULL</div>
+          Example: <div class="code">SELECT LastName,FirstName,Address FROM Persons WHERE Address IS NULL</div>
+          <span class="methoddetail">Used to check for null values, because “= NULL” will always return NULL and thus will always fail</span>
+
+
+      </article>
+    </div>
+    <footer>
+      <div class="horizontal-line"></div>
+      <span class="methoddetail">&copy;2015 by Stranger Danger</span>
+    </footer>
+  </body>
+</html>
