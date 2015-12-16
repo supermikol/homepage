@@ -13,11 +13,11 @@ I am a problem solver by nature, with a tendency to pick at inefficiencies. I be
 
 From my own experience teaching, I’ve discovered that the best students were oftentimes the most notorious, but only because there were no teachers who minded their unorthodox counter-culture ideas, who pushed their idle minds, or who paid attention to the type of learning methods they were most suited for. Attention, guidance, and encouragement—these are all critical ingredients comprising a real educator that school systems need—educators that currently number in few too many, at least based on current archaic, inefficient teaching models.
 
-I am brought to DBC with a single-minded passion to make a difference in education, anywhere in the world where it may take me. There is a dearth of talent in education which I suspect has to do with the ostensibly lack of profit to be made, but I don’t believe that has to be the case. There are <a href=” http://www.theverge.com/2015/9/3/9252845/facebook-education-software-plp-summit”> initiatives being taken by Mark Zuckerberg</a> and Google to invest in scalable education models combining both online and offline elements. This means scaling knowledge through online platforms where possible, while providing teachers on-site to provide attention and guidance. It’s an ambitious project, but I believe it has plenty of potential to make a difference, and I’m determined to be a part of it.
+I am brought to DBC with a single-minded passion to make a difference in education, anywhere in the world where it may take me. There is a dearth of talent in education which I suspect has to do with the ostensibly lack of profit to be made, but I don’t believe that has to be the case. There are [initiatives being taken by Mark Zuckerberg](http://www.theverge.com/2015/9/3/9252845/facebook-education-software-plp-summit) and Google to invest in scalable education models combining both online and offline elements. This means scaling knowledge through online platforms where possible, while providing teachers on-site to provide attention and guidance. It’s an ambitious project, but I believe it has plenty of potential to make a difference, and I’m determined to be a part of it.
 
 I'm currently in China, where I've been for over 4 years. I am co-founder of an [education company](http://www.cunshande.com) helping students prepare and apply for college abroad, but now we're ready for more.
 
-#####Now, some fun facts about me:
+####Now, some fun facts about me:
 * I once lived in a buddhist monastry for 3 months during high school. It's based in Ukiah, and it's called "City of Ten Thousand Buddhas"
 
   <img src="./imgs/cttb.jpg" alt="cttb" style="width: 650px;"/>
@@ -39,4 +39,4 @@ I'm currently in China, where I've been for over 4 years. I am co-founder of an 
 
   ![oxford_comma](./imgs/oxfordcomma.jpg "Oxford Comma")
 
-#####And there you have it! You're more than welcome to say hi and pester me with awesome (or terrible) questions if you have any.
+And there you have it! You're more than welcome to say hi and pester me with awesome (or terrible) questions if you have any.
