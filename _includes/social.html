@@ -1,8 +1,8 @@
-Follow me:
+<span id="follow">Follow me:</span>
 <div id="stalker">
   {% if site.data.theme.social.github %}
   <a title="{{ site.data.theme.social.github }} on Github" href="https://github.com/{{ site.data.theme.social.github }}">
-    <i class="fa fa-github-square"></i>
+    <img src="/imgs/github_logo.png" alt="github logo" style="width: 25px;" />
   </a>
   {% endif %}
 
@@ -38,7 +38,7 @@ Follow me:
 
   {% if site.data.theme.social.facebook %}
   <a title="{{ site.data.theme.name }} on Facebook" href="https://facebook.com/{{ site.data.theme.social.facebook }}">
-    <i class="fa fa-facebook-square"></i>
+    <img src="/imgs/facebook_logo.png" alt="facebook logo" style="width: 25px;" />
   </a>
   {% endif %}
 
@@ -50,7 +50,19 @@ Follow me:
 
   {% if site.data.theme.social.linkedin %}
   <a title="{{ site.data.theme.name }} on LinkedIn" href="https://www.linkedin.com/in/{{ site.data.theme.social.linkedin }}">
-    <i class="fa fa-linkedin-square"></i>
+    <img src="/imgs/linkedin_logo.png" alt="linkedin logo" style="width: 25px;" />
+  </a>
+  {% endif %}
+
+  {% if site.data.theme.social.zhihu %}
+  <a title="{{ site.data.theme.name }} on Zhihu" href="http://www.zhihu.com/people/{{ site.data.theme.social.quora }}">
+    <img src="/imgs/zhihu_logo.png" alt="zhihu logo" style="width: 25px;" />
+  </a>
+  {% endif %}
+
+  {% if site.data.theme.social.quora %}
+  <a title="{{ site.data.theme.name }} on Quora" href="https://www.quora.com/profile/{{ site.data.theme.social.quora }}">
+    <img src="/imgs/quora_logo.png" alt="quora logo" style="width: 25px;" />
   </a>
   {% endif %}
 
