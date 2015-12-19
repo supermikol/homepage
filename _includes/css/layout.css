@@ -72,7 +72,11 @@
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {
-	.sidebar {
+	nav ul li {
+		display: inline;
+		border: none;
+	}
+	#logo, #bio {
 		display: none;
 	}
 
