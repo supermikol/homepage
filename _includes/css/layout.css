@@ -12,6 +12,7 @@
 	#logo {
 		font-size: 21px;
 		margin-bottom: 15px; }
+	header h1 { font-size: 30px; line-height: 37px; }
 	nav .button {
 		padding: 9px 20px 11px;
 		border-radius: 10px;}
@@ -21,6 +22,10 @@
 @media only screen and (min-width: 768px) and (max-width: 959px) {
 	nav {
 		width: 160px; }
+	h1 {
+		font-size: 25px;
+		line-height: 36px;
+}
 	.sidebar h2 {
 		font-size: 18px;
 	}
@@ -32,7 +37,10 @@
 
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
-	header h1 { font-size: 34px; line-height: 37px; }
+	h1 {
+		font-size: 28px;
+		line-height: 36px;
+}
 	nav { position: relative; }
 	nav ul,
 	#logo { text-align: left; }
