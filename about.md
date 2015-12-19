@@ -20,7 +20,7 @@ I'm currently in China, where I've been for over 4 years. I am co-founder of an 
 ####Now, some fun facts about me:
 * I once lived in a buddhist monastry for 3 months during high school. It's based in Ukiah, and it's called "City of Ten Thousand Buddhas"
 
-  <img src="./imgs/cttb.jpg" alt="cttb" style="width: 650px;"/>
+  <img src="./imgs/cttb.jpg" alt="cttb" style="width: 90%;"/>
      _Yeah..there was no running from this place_
      _Source-http://www.drba.org/gallery.html_
 
@@ -28,15 +28,15 @@ I'm currently in China, where I've been for over 4 years. I am co-founder of an 
 * Although my heritage is Chinese, my parents were born and raised in Vietnam. I also grew up in the Tenderloin, where there is a sizeable Vietnamese population, so I grew up eating Vietnamese food. It's still one of my favorite cuisines.
 * I was on the set of Amazing Spiderman (the one with Andrew Garfield). Random series of events led to me being chosen for a background role, and I was flown to New York (from LA) for a few days. If you pay attention to the lab scene right before Peter Parker gets bitten, you'll see me!
 
-  ![spidey1](./imgs/spiderman/spidey1.jpg "Spidey 1")
+  <img src="./imgs/spiderman/spidey1.jpg" alt="spidey1" style="width: 90%;"/>
 
-  ![spidey2](./imgs/spiderman/spidey4.jpg "Spidey 2")
+  <img src="./imgs/spiderman/spidey4.jpg" alt="spidey2" style="width: 90%;"/>
 
-  ![spidey3](./imgs/spiderman/spidey2.jpg "Spidey 3")
+  <img src="./imgs/spiderman/spidey2.jpg" alt="spidey3" style="width: 90%;"/>
      _If only they handed out Academy Awards for facial expressions_
 
 * My greatest petpeeve: Missing oxford comma
 
-  ![oxford_comma](./imgs/oxfordcomma.jpg "Oxford Comma")
+  <img src="./imgs/oxfordcomma.jpg" alt="oxford" style="width: 90%;"/>
 
 And there you have it! You're more than welcome to say hi and pester me with awesome (or terrible) questions if you have any.
