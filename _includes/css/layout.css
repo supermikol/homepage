@@ -36,8 +36,17 @@
 	nav { position: relative; }
 	nav ul,
 	#logo { text-align: left; }
-	.sidebar {
-		display: none;
+	nav ul li {
+		display: inline;
+		border: none;
+	}
+
+	#logo, #bio, #follow {
+	display: none;
+	}
+
+	#social {
+		text-align: center;
 	}
 	.content {
 		border: 0px;
@@ -47,7 +56,11 @@
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-	.sidebar {
+	nav ul li {
+		display: inline;
+		border: none;
+	}
+	#logo, #bio {
 		display: none;
 	}
 
