@@ -39,6 +39,10 @@
 	nav ul li {
 		display: inline;
 		border: none;
+		font-size: 1em;
+	}
+	nav ul {
+		text-align: center;
 	}
 
 	#logo, #bio, #follow {
