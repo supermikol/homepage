@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: content
 title: Squirrel Game
 categories:
 - blog
@@ -18,26 +18,55 @@ categories:
     <div class="box"><img id="box_10" /></div>
     <div class="box"><img id="box_20" /></div>
   </p>
-  <p>
-    <div id="game_counter"></div>
-    <div id="game_message"></div>
-  </p>
+</div>
+<div id="gametext">
+  <div id="game_counter"></div>
+  <div id="game_message"></div>
 </div>
 <div id="controls">
   <span id="row1">
-    <div id="invisible"> </div>
-    <input type="button" onClick="move('up')" value="Up" />
+    <div class="invisible"></div>
+    <div class="button" onClick="move('up')" value="Up" >Up</div>
+    <div class="button" onClick="reset_game()" value="Reset">Reset</div>
   </span>
-  <input type="button" value="Left" onClick="move('left')" />
-  <input type="button" onClick="move('down')" value="Down" />
-  <input type="button" onClick="move('right')" value="Right" />
-  <input type="button" onClick="reset_game()" value="Reset" />
+  <span id="row2">
+    <div class="button" onClick="move('left')" value="Left">Left</div>
+    <div class="button" onClick="move('down')" value="Down">Down</div>
+    <div class="button" onClick="move('right')" value="Right">Right</div>
+  </span>
+</div>
+<div id="scoretable">
+  Recent Scores
+  <div id="highscore"></div>
 </div>
 
 <script>
 document.getElementById("demo").innerHTML = "My First JavaScript Code";
 
-document.getElementById("game_counter").innerHTML = "Number of turns remaining: " + squirrel.turns + "<br> Number of acorns collected: " + squirrel.acorns;
+document.getElementById("game_counter").innerHTML = "Turns remaining: " + squirrel.turns + " // Acorns collected: " + squirrel.acorns;
 update_acorn();
 update_squirrel();
+
+$(document).ready(function(){
+  $(document).keydown(function(key){
+    switch(parseInt(key.which,10)) {
+      // Left Arrow Pressed
+      case 37:
+        move('left');
+        break;
+      // Up Arrow Pressed
+      case 38:
+        move('up');
+        break;
+      // Right Arrow Pressed
+      case 39:
+        move('right');
+        break;
+      // Down Arrow Pressed
+      case 40:
+        move('down');
+        break;
+    }
+  });
+});
 </script>

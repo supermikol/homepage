@@ -13,16 +13,16 @@ function move(direction) {
   if (squirrel.turns > 0) {
     switch (direction) {
       case 'up':
-        squirrel.posY += 1
+        if (squirrel.posY === 0) squirrel.posY += 1;
         break;
       case 'down':
-        squirrel.posY -= 1
+        if (squirrel.posY === 1) squirrel.posY -= 1;
         break;
       case 'left':
-        squirrel.posX -= 1
+        if (squirrel.posX != 0) squirrel.posX -= 1;
         break;
       case 'right':
-        squirrel.posX += 1
+        if (squirrel.posX != 2) squirrel.posX += 1;
         break;
     }
     if (squirrel.posX === acorn.posX && squirrel.posY === acorn.posY) {
@@ -36,17 +36,16 @@ function move(direction) {
 
     }
     squirrel.turns -= 1;
-    var turn_message = "Number of turns remaining: " + squirrel.turns + "<br>Number of acorns collected: " + squirrel.acorns;
+    var turn_message = "Turns remaining: " + squirrel.turns + " // Acorns collected: " + squirrel.acorns;
     document.getElementById("game_counter").innerHTML = turn_message;
-    if (squirrel.posX > 2 || squirrel.posY > 1 || squirrel.posX < 0 || squirrel.posY < 0) {
-      alert("You're outside the bush! Find your way back!");
-    }
     clear_boxes();
     update_acorn();
     update_squirrel();
   }
   else {
-    alert("You are out of turns! You collected a grand total of " + squirrel.acorns + " acorns!");
+    $(document).ready(function(){
+      $('#game_counter').html("You are out of turns! You collected a grand total of " + squirrel.acorns + " acorns!");
+    });
     reset_game();
 
   }
@@ -124,6 +123,7 @@ function reset_game() {
   clear_boxes();
   update_acorn();
   update_squirrel();
+  $('#highscore').prepend('<p>' + squirrel.acorns + '</p>')
   squirrel = {
     posX: 1,
     posY: 0,
@@ -133,5 +133,5 @@ function reset_game() {
   acorn = {
     posY: Math.round(Math.random()),
     posX: Math.floor(Math.random()*3)
-}
+};
 }
